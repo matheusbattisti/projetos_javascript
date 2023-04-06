@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+.hex {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}

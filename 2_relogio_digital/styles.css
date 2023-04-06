@@ -1,0 +1,14 @@
+.clock {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.clock span {
+  display: inline-block;
+}
+
+.clock span:after {
+  margin-left: 5px;
+}

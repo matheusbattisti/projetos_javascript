@@ -1,0 +1,35 @@
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e8b57;
+}

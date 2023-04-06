@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para inputs com erro */
+input.error,
+textarea.error {
+  border-color: red;
+}
+
+/* Estilo para labels com erro */
+label.error {
+  color: red;
+}
+
+/* Estilo para mensagens de erro */
+.error-message.show {
+  display: block;
+}
+
+/* Estilo para mensagens de sucesso */
+.success-message.show {
+  display: block;
+}
