@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.accordion-item--active .accordion-header {
+  background-color: #ddd;
+}
+
+.accordion-item--active .accordion-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* esconde o conteúdo dos itens fechados */
+.accordion-item--closed .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* adiciona transição suave para abrir e fechar itens */
+.accordion-content {
+  transition: max-height 0.3s ease-out;
+}
