@@ -1,14 +1,29 @@
+body {
+  background-color: #333;
+  font-family: Helvetica;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .clock {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   text-align: center;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .clock span {
-  display: inline-block;
-}
-
-.clock span:after {
-  margin-left: 5px;
+  margin-right: 0.5rem;
 }

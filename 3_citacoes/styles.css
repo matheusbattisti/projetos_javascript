@@ -1,12 +1,18 @@
+body {
+  background-color: #178d3e;
+  padding-top: 2rem;
+}
+
 .quote {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 1.6rem;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #333;
-  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 0.4rem;
 }
 
 .quote .text {
@@ -16,11 +22,12 @@
 
 .quote .author {
   font-weight: bold;
+  color: #133110;
 }
 
 .quote .button {
   font-size: 20px;
-  background-color: #333;
+  background-color: #0a2c07;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -30,5 +37,5 @@
 }
 
 .quote .button:hover {
-  background-color: #555;
+  background-color: #12520c;
 }
