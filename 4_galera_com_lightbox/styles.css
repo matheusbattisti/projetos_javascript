@@ -1,3 +1,8 @@
+h1 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +21,9 @@
   width: 100%;
   height: auto;
   transition: transform 0.2s ease-in-out;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .gallery-image:hover {
@@ -38,19 +46,28 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .lightbox-image {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 800px;
+  object-fit: cover;
 }
 
 .lightbox-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2em;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
   color: #fff;
+  border: 1px solid #fff;
+  padding: 0.1rem 0.3rem;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.lightbox-close:hover {
+  background-color: #fff;
+  color: #000;
 }

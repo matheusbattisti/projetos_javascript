@@ -1,15 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+#converterForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 label {
@@ -18,14 +19,21 @@ label {
   font-weight: bold;
 }
 
-textarea {
-  width: 100%;
+textarea,
+pre {
+  width: 600px;
   height: 200px;
   padding: 10px;
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 5px;
   resize: none;
+}
+
+pre {
+  height: auto;
+  margin: 1.5rem auto;
+  text-align: left;
 }
 
 button {
@@ -37,12 +45,9 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 button:hover {
   background-color: #0069d9;
-}
-
-.result {
-  margin-top: 20px;
 }

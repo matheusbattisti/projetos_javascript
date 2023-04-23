@@ -9,9 +9,9 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1rem;
 }
 
 h1 {
@@ -26,11 +26,12 @@ form {
 .form-control {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 label {
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
 }
 
 input[type="text"],
@@ -43,46 +44,27 @@ textarea {
 }
 
 .error-message {
-  color: red;
-  margin-top: 5px;
-}
-
-.success-message {
-  color: green;
+  color: #e21111;
   margin-top: 5px;
 }
 
 button[type="submit"] {
-  background-color: #4caf50;
+  background-color: #2756af;
   color: white;
-  padding: 10px;
+  padding: 0.7rem;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #132f63;
 }
 
 /* Estilo para inputs com erro */
-input.error,
-textarea.error {
-  border-color: red;
-}
-
-/* Estilo para labels com erro */
-label.error {
-  color: red;
-}
-
-/* Estilo para mensagens de erro */
-.error-message.show {
-  display: block;
-}
-
-/* Estilo para mensagens de sucesso */
-.success-message.show {
-  display: block;
+.form-control.error input,
+.form-control.error textarea {
+  border-color: #e21111;
 }

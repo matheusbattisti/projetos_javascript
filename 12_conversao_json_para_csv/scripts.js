@@ -29,6 +29,12 @@ function csvToJson(csv) {
   const headers = lines[0].split(",");
   const json = [];
 
+  // Remover outro JSON
+  const preTags = document.querySelectorAll("pre");
+  preTags.forEach((tag) => {
+    tag.remove();
+  });
+
   for (let i = 1; i < lines.length; i++) {
     const values = lines[i].split(",");
     const row = {};

@@ -1,16 +1,12 @@
-div {
-  display: flex;
-  align-items: center;
+* {
+  font-family: Helvetica;
 }
 
-input[type="text"] {
-  width: 150px;
-  height: 30px;
-  font-size: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
 }
 
 button {
@@ -18,7 +14,8 @@ button {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  margin: 0 0.5rem;
 }

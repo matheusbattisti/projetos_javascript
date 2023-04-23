@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galera com Lightbox</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer></script>
   </head>
   <body>
     <h1>Barra de Progresso</h1>
-    <div class="progress-bar">
-      <div class="progress"></div>
-    </div>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
 
-    <div class="controls">
-      <button id="previous-btn">&lt; Previous</button>
-      <button id="next-btn">Next &gt;</button>
+      <div class="controls">
+        <button id="previous-btn">
+          <i class="bi bi-arrow-left"></i> Voltar
+        </button>
+        <button id="next-btn">Próximo <i class="bi bi-arrow-right"></i></button>
+      </div>
     </div>
   </body>
 </html>

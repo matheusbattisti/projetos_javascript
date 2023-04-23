@@ -7,9 +7,9 @@ body {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  margin: 50px auto;
+  margin: 3rem auto;
   max-width: 500px;
-  padding: 20px;
+  padding: 1.6rem;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
 label {
   display: block;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 0.5rem 0;
 }
 
 input[type="number"],

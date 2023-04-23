@@ -9,7 +9,10 @@ function generateColors() {
     const color = generateRandomColor();
     const colorDiv = document.createElement("div");
     colorDiv.style.backgroundColor = color;
-    colorDiv.innerText = color;
+    const colorName = document.createElement("p");
+    colorName.innerText = color;
+    colorName.style.color = color;
+    colorDiv.appendChild(colorName);
     colorsDiv.appendChild(colorDiv);
   }
 }
