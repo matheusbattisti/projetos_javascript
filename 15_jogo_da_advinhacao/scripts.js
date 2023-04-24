@@ -1,12 +1,13 @@
 // Obtém os elementos HTML
-const guessInput = document.getElementById("guess");
-const guessButton = document.getElementById("guess-btn");
-const resultParagraph = document.getElementById("result");
-const difficultySelect = document.getElementById("difficulty");
-const difficultySection = document.getElementById("difficulty-section");
-const gameSection = document.getElementById("game-section");
-const triesLeftSpan = document.getElementById("tries-left");
-const resetButton = document.getElementById("reset-btn");
+const guessSection = document.querySelector("#guess-section");
+const guessInput = document.querySelector("#guess");
+const guessButton = document.querySelector("#guess-btn");
+const resultParagraph = document.querySelector("#result");
+const difficultySelect = document.querySelector("#difficulty");
+const difficultySection = document.querySelector("#difficulty-section");
+const gameSection = document.querySelector("#game-section");
+const triesLeftSpan = document.querySelector("#tries-left");
+const resetButton = document.querySelector("#reset-btn");
 
 // Define as configurações de dificuldade
 let maxTries;
@@ -40,6 +41,7 @@ difficultySelect.addEventListener("change", function () {
   // Oculta a seleção de dificuldade e exibe o campo de entrada de palpite
   difficultySection.style.display = "none";
   gameSection.style.display = "block";
+  guessSection.style.display = "flex";
 });
 
 // Adiciona o evento de clique ao botão "Enviar"
@@ -58,6 +60,7 @@ guessButton.addEventListener("click", function () {
         (maxTries - triesLeft + 1) +
         " tentativas!";
       resetButton.style.display = "block";
+      guessSection.style.display = "none";
     } else if (guess > randomNumber) {
       resultParagraph.textContent = "Muito alto. Tente novamente.";
       triesLeft--;
@@ -69,10 +72,11 @@ guessButton.addEventListener("click", function () {
     triesLeftSpan.textContent = triesLeft;
 
     // Verifica se o usuário excedeu o número máximo de tentativas
-    if (triesLeft < 0) {
+    if (triesLeft === 0) {
       resultParagraph.textContent =
         "Suas tentativas acabaram. O número correto era " + randomNumber + ".";
       resetButton.style.display = "block";
+      guessSection.style.display = "none";
     }
   }
 
@@ -82,14 +86,14 @@ guessButton.addEventListener("click", function () {
 
 function resetGame() {
   maxTries = 10;
-  difficultySelect.value = "1";
+  difficultySelect.value = "";
   randomNumber = Math.floor(Math.random() * 100) + 1;
   triesLeft = maxTries;
   triesLeftSpan.textContent = triesLeft;
   resultParagraph.textContent = "";
 
   // Exibe a seleção de dificuldade e oculta o campo de entrada de palpite
-  difficultySection.style.display = "block";
+  difficultySection.style.display = "flex";
   gameSection.style.display = "none";
 
   // Oculta o botão de reinício

@@ -7,15 +7,6 @@ const cancelButton = document.getElementById("cancel-button");
 // remove exibição de pop up ao entrar na pagina
 localStorage.removeItem("popupDisplayed");
 
-// adiciona listener de saída da página
-window.addEventListener("beforeunload", (event) => {
-  // define a mensagem de saída
-  const message = "Você tem certeza que deseja sair?";
-  // define a propriedade returnValue do evento para exibir a mensagem de saída
-  event.preventDefault();
-  event.returnValue = message;
-});
-
 // adiciona listener de clique no botão de cancelar
 cancelButton.addEventListener("click", () => {
   // fecha o pop-up

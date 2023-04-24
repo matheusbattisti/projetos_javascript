@@ -1,20 +1,28 @@
+* {
+  font-family: Helvetica;
+}
+
+h1 {
+  text-align: center;
+}
+
 .kanban {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 .column {
   width: 30%;
   background-color: #eee;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .tasks {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   border: 2px dashed #ccc;
   border-radius: 5px;
   min-height: 100px;
@@ -41,18 +49,19 @@ h2 {
 }
 
 #add-task-form {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
 }
 
 #add-task-form input[type="text"] {
-  padding: 5px;
-  margin-right: 10px;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
   border-radius: 3px;
   border: 1px solid #ccc;
 }
 
 #add-task-form button[type="submit"] {
-  padding: 5px 10px;
+  padding: 0.3rem 1rem;
   background-color: #2196f3;
   color: #fff;
   border: none;
