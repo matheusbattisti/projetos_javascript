@@ -4,14 +4,6 @@ const copiarCpfBtn = document.getElementById("copiar-cpf");
 
 // Função para gerar CPF aleatório
 function gerarCPF() {
-  let cpf = "";
-  for (let i = 0; i < 11; i++) {
-    cpf += Math.floor(Math.random() * 10);
-  }
-  cpfEl.innerText = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
-}
-
-function gerarCPF() {
   let n = Math.floor(Math.random() * 999999999) + 1;
   let nStr = n.toString().padStart(9, "0");
   let dv1 = calcularDV(nStr, 10);
