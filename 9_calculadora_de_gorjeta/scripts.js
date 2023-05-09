@@ -1,7 +1,7 @@
 function calculateTip() {
   // Obter valor da conta e qualidade do serviço
-  var billAmount = document.getElementById("billAmount").value;
-  var serviceQuality = document.getElementById("serviceQuality").value;
+  const billAmount = document.getElementById("billAmount").value;
+  const serviceQuality = document.getElementById("serviceQuality").value;
 
   // Validar entrada
   if (billAmount === "" || serviceQuality == 0) {
@@ -10,8 +10,8 @@ function calculateTip() {
   }
 
   // Calcular gorjeta e valor total
-  var tipAmount = billAmount * serviceQuality;
-  var totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
+  const tipAmount = billAmount * serviceQuality;
+  const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
 
   // Exibir resultados
   document.getElementById("tipAmount").value = "R$" + tipAmount.toFixed(2);

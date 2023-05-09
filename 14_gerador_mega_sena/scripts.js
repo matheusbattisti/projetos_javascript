@@ -1,5 +1,5 @@
 const numbers = document.querySelectorAll(".number");
-const generateBtn = document.getElementById("generate");
+const generateBtn = document.querySelector("#generate");
 
 function generateNumbers() {
   const max = 60; // número máximo

@@ -1,7 +1,7 @@
-const converterForm = document.getElementById("converterForm");
-const converterInput = document.getElementById("converterInput");
-const jsonToCsvButton = document.getElementById("jsonToCsvButton");
-const csvToJsonButton = document.getElementById("csvToJsonButton");
+const converterForm = document.querySelector("#converterForm");
+const converterInput = document.querySelector("#converterInput");
+const jsonToCsvButton = document.querySelector("#jsonToCsvButton");
+const csvToJsonButton = document.querySelector("#csvToJsonButton");
 
 function jsonToCsv(json) {
   const headers = Object.keys(json[0]);

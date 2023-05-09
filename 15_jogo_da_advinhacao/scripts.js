@@ -55,10 +55,9 @@ guessButton.addEventListener("click", function () {
   } else {
     // Compara o palpite do usuário com o número aleatório
     if (guess === randomNumber) {
-      resultParagraph.textContent =
-        "Parabéns, você acertou em " +
-        (maxTries - triesLeft + 1) +
-        " tentativas!";
+      resultParagraph.textContent = `Parabéns! Você acertou em ${
+        maxTries - triesLeft + 1
+      } tentativa(s).`;
       resetButton.style.display = "block";
       guessSection.style.display = "none";
     } else if (guess > randomNumber) {
@@ -85,18 +84,12 @@ guessButton.addEventListener("click", function () {
 });
 
 function resetGame() {
-  maxTries = 10;
   difficultySelect.value = "";
-  randomNumber = Math.floor(Math.random() * 100) + 1;
-  triesLeft = maxTries;
-  triesLeftSpan.textContent = triesLeft;
   resultParagraph.textContent = "";
 
-  // Exibe a seleção de dificuldade e oculta o campo de entrada de palpite
   difficultySection.style.display = "flex";
   gameSection.style.display = "none";
-
-  // Oculta o botão de reinício
+  guessSection.style.display = "none";
   resetButton.style.display = "none";
 }
 

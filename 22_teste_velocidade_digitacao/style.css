@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.instrucoes {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#texto {
+  font-size: 1.2rem;
+  background-color: #f3f3f3;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#entrada {
+  width: 100%;
+  padding: .8rem;
+  margin-bottom: 1rem;
+}
+
+#resultado {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: .6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#alternarTema {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Tema claro */
+.claro {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Tema escuro */
+.escuro {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.escuro #texto {
+  color: #333;
+}

@@ -1,7 +1,7 @@
 // Adiciona o evento de scroll na janela
 window.addEventListener("scroll", function () {
   // Obtém a posição da janela atual
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   // Verifica se a posição da janela é maior que 500 pixels
   if (scrollTop > 500) {
