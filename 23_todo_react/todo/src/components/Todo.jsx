@@ -1,4 +1,4 @@
-const Todo = ({ todo, index, completeTodo, removeTodo }) => {
+const Todo = ({ todo, completeTodo, removeTodo }) => {
   return (
     <div
       className="todo"
@@ -9,10 +9,10 @@ const Todo = ({ todo, index, completeTodo, removeTodo }) => {
         <p className="category">({todo.category})</p>
       </div>
       <div>
-        <button className="complete" onClick={() => completeTodo(index)}>
+        <button className="complete" onClick={() => completeTodo(todo.id)}>
           Completar
         </button>
-        <button className="remove" onClick={() => removeTodo(index)}>
+        <button className="remove" onClick={() => removeTodo(todo.id)}>
           x
         </button>
       </div>

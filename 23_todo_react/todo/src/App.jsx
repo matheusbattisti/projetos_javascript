@@ -12,12 +12,14 @@ import TodoForm from "./components/TodoForm";
 const App = () => {
   const [todos, setTodos] = useState([
     {
+      id: 1,
       text: "Criar funcionalidade X no sistema",
       category: "Trabalho",
       isCompleted: false,
     },
-    { text: "Ir para a academia", category: "Pessoal", isCompleted: false },
+    { id: 2,text: "Ir para a academia", category: "Pessoal", isCompleted: false },
     {
+      id: 3,
       text: "Estudar React",
       category: "Estudos",
       isCompleted: false,
@@ -30,19 +32,21 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   const addTodo = (text, category) => {
-    const newTodos = [...todos, { text, category, isCompleted: false }];
+    const newTodos = [...todos, 
+      { id: Math.floor(Math.random() * 1000), text, category, isCompleted: false }
+    ];
     setTodos(newTodos);
   };
 
-  const removeTodo = (index) => {
+  const removeTodo = (id) => {
     const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+    const filteredTodos = newTodos.filter((todo) => todo.id !== id ?  todo : null)
+    setTodos(filteredTodos);
   };
 
-  const completeTodo = (index) => {
+  const completeTodo = (id) => {
     const newTodos = [...todos];
-    newTodos[index].isCompleted = !newTodos[index].isCompleted;
+    newTodos.map((todo) => todo.id === id ?  todo.isCompleted = !todo.isCompleted : todo)
     setTodos(newTodos);
   };
 
