@@ -1,8 +1,8 @@
 // obtém o pop-up
-const popup = document.getElementById("popup");
+const popup = document.querySelector("#popup");
 
 // obtém o botão de cancelar
-const cancelButton = document.getElementById("cancel-button");
+const cancelButton = document.querySelector("#cancel-button");
 
 // remove exibição de pop up ao entrar na pagina
 localStorage.removeItem("popupDisplayed");
@@ -26,20 +26,6 @@ document.addEventListener("mouseout", (event) => {
     if (event.relatedTarget === null) {
       // exibe o pop-up
       popup.style.display = "block";
-      // define a mensagem de saída
-      const message = "Você tem certeza que deseja sair?";
-      // define a propriedade returnValue do evento para exibir a mensagem de saída
-      window.onbeforeunload = () => message;
     }
   }
-});
-
-// adiciona listener de clique em links
-document.addEventListener("click", (event) => {
-  // verifica se o link não é para sair da página
-  if (!event.target.href) return;
-  // fecha o pop-up
-  popup.style.display = "none";
-  // armazena o valor indicando que o pop-up já foi exibido
-  localStorage.setItem("popupDisplayed", "true");
 });
