@@ -1,6 +1,6 @@
-const botaoVerificar = document.getElementById("botao-verificar");
-const palavraInput = document.getElementById("palavra");
-const resultado = document.getElementById("resultado");
+const botaoVerificar = document.querySelector("#botao-verificar");
+const palavraInput = document.querySelector("#palavra");
+const resultado = document.querySelector("#resultado");
 
 botaoVerificar.addEventListener("click", () => {
   verificarPalindromo();
@@ -16,7 +16,7 @@ palavraInput.addEventListener("keyup", (event) => {
 function verificarPalindromo() {
   const palavra = palavraInput.value;
   const palavraInvertida = palavra.split("").reverse().join("");
-  if (palavra === palavraInvertida) {
+  if (palavra.toLowerCase() === palavraInvertida.toLowerCase()) {
     resultado.innerHTML = `A palavra ${palavra} é um palíndromo!`;
   } else {
     resultado.innerHTML = `A palavra ${palavra} não é um palíndromo.`;
